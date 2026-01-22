@@ -1,0 +1,16 @@
+[project]
+name = "platynui-workshop"
+version = "0.1.0"
+description = "Workshop environment for Robot Framework + PlatynUI desktop automation"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "pyside6>=6.10.1",
+    "robotcode-runner>=2.2.0",
+    "robotframework>=7.4.1",
+    "robotframework-platynui==0.9.2",
+]
+
+[tool.uv]
+# Optional: prefer an in-project venv for predictable tooling in VS Code
+managed = true

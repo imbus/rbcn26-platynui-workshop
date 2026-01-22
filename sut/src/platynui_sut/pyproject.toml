@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "platynui-sut"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Ziyad Hajj Hassan" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "pyside6",
+  "robotframework",
+  "robotframework-platynui"
+]
+
+[project.urls]
+Documentation = "https://github.com/unknown/platynui-sut#readme"
+Issues = "https://github.com/unknown/platynui-sut/issues"
+Source = "https://github.com/unknown/platynui-sut"
+
+[dependency-groups]
+dev = [
+    "coverage[toml]>=7.6.1",
+    "pyinstaller>=6.16.0",
+    "pytest>=8.3.5",
+    "robotframework-robocop",
+]
+
+
+

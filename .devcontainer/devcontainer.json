@@ -1,0 +1,56 @@
+{
+  "name": "Robocon 2026 - PlatynUI Workshop",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true,
+      "username": "devcontainer"
+    },
+
+    "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {},
+
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "version": "latest",
+      "noVncVersion": "1.2.0",
+      "password": "vscode",
+      "webPort": "6080",
+      "vncPort": "5901"
+    },
+
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "8.0",
+      "dotnetRuntimeVersions": "8.0",
+      "aspNetCoreRuntimeVersions": "8.0"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "d-biehl.robotcode",
+        "tamasfe.even-better-toml",
+        "charliermarsh.ruff",
+        "ms-python.black-formatter",
+        "ms-python.mypy-type-checker"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
+      }
+    }
+  },
+
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": { "label": "Desktop (noVNC)" }
+  },
+
+  "postCreateCommand": "bash -lc '.devcontainer/postCreateCommand.sh'",
+  "remoteUser": "devcontainer"
+}

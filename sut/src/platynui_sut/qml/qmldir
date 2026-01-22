@@ -1,0 +1,5 @@
+# QML Module Definition
+# Registers singletons and types for the Qt Quick module system
+# Without this file, Theme would not be globally available as a singleton
+
+singleton Theme 1.0 Theme.qml
