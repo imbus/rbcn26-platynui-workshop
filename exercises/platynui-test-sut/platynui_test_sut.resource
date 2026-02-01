@@ -13,6 +13,10 @@ ${PLATYNUI_SUT_MINIMIEREN_BUTTON}           ${PLATYNUI_SUT_MAIN_WINDOW}/TitleBar
 ${PLATYNUI_SUT_MAXIMIEREN_BUTTON}           ${PLATYNUI_SUT_MAIN_WINDOW}/TitleBar/Button[@Name="Maximieren"]
 ${PLATYNUI_SUT_SCHLIEßEN_BUTTON}            ${PLATYNUI_SUT_MAIN_WINDOW}/TitleBar/Button[@Name="Schließen"]
 
+## Status Bar (Footer)
+${PLATYNUI_SUT_STATUSBAR}                   ${PLATYNUI_SUT_MAIN_WINDOW}/StatusBar
+${PLATYNUI_SUT_STATUSBAR_TEXT}              ${PLATYNUI_SUT_STATUSBAR}/Text
+
 ## Navigation Menu
 ${PLATYNUI_SUT_NAV_MENU_LIST}               ${PLATYNUI_SUT_MAIN_WINDOW}//List[@Name="Navigation Menu"]
 ${PLATYNUI_SUT_NAV_CONTROLS_LISTITEM}       ${PLATYNUI_SUT_NAV_MENU_LIST}/ListItem[@Name="Controls Page"]
@@ -25,6 +29,16 @@ ${PLATYNUI_SUT_NAV_ABOUT_LISTITEM}          ${PLATYNUI_SUT_NAV_MENU_LIST}/ListIt
 ${PLATYNUI_SUT_BUTTONS_GROUP}               ${PLATYNUI_SUT_MAIN_WINDOW}//Group[@Name="Buttons Group"]
 ${PLATYNUI_SUT_CHECKBOX_COMBOBOX_GROUP}     ${PLATYNUI_SUT_MAIN_WINDOW}//Group[@Name="CheckBox - ComboBox - Switch Group"]
 ${PLATYNUI_SUT_RADIOBUTTONS_GROUP}          ${PLATYNUI_SUT_MAIN_WINDOW}//Group[@Name="RadioButtons Group"]
+
+### Buttons
+${PLATYNUI_SUT_REGULAR_BUTTON}              ${PLATYNUI_SUT_BUTTONS_GROUP}/Button[@Name="Regular Button"]
+${PLATYNUI_SUT_PRIMARY_BUTTON}              ${PLATYNUI_SUT_BUTTONS_GROUP}/Button[@Name="Primary Button with Icon"]
+${PLATYNUI_SUT_TOOL_BUTTON}                 ${PLATYNUI_SUT_BUTTONS_GROUP}/Button[@Name="Tool Button"]
+
+### Checkbox - ComboBox - Switch
+${PLATYNUI_SUT_REGULAR_CHECKBOX}            ${PLATYNUI_SUT_CHECKBOX_COMBOBOX_GROUP}/CheckBox[@Name="Checked Checkbox"]
+${PLATYNUI_SUT_SELECT_COMBOBOX}             ${PLATYNUI_SUT_CHECKBOX_COMBOBOX_GROUP}/CheckBox[@Name="Select ComboBox"]
+${PLATYNUI_SUT_FLIGHT_SWITCH_CHECKBOX}      ${PLATYNUI_SUT_CHECKBOX_COMBOBOX_GROUP}/CheckBox[@Name="Flight Mode Switch"]
 
 ### Radio Buttons
 ${PLATYNUI_SUT_SMALL_RADIOBUTTON}           ${PLATYNUI_SUT_RADIOBUTTONS_GROUP}/RadioButton[@Name="Small"]
