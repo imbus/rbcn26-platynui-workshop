@@ -22,8 +22,10 @@ ${7_BUTTON}                     ${CALC_WINDOW}//Button[@AutomationId="num7Button
 ${8_BUTTON}                     ${CALC_WINDOW}//Button[@AutomationId="num8Button"]
 ${9_BUTTON}                     ${CALC_WINDOW}//Button[@AutomationId="num9Button"]
 
-${PLUS_BUTTON}                  ${CALC_WINDOW}//Button[@AutomationId="plusButton"]
+${DIVIDE_BUTTON}                ${CALC_WINDOW}//Button[@AutomationId="divideButton"]
+${MULTIPLY_BUTTON}              ${CALC_WINDOW}//Button[@AutomationId="multiplyButton"]
 ${MINUS_BUTTON}                 ${CALC_WINDOW}//Button[@AutomationId="minusButton"]
+${PLUS_BUTTON}                  ${CALC_WINDOW}//Button[@AutomationId="plusButton"]
 ${EQUALS_BUTTON}                ${CALC_WINDOW}//Button[@AutomationId="equalButton"]
 ${CLEAR_BUTTON}                 ${CALC_WINDOW}//Button[@AutomationId="clearButton"]
 
@@ -39,7 +41,7 @@ Focus Calculator
 
 Clear Calculator
     [Documentation]    Resets Calculator input using the Clear button.
-    Press Keys    ${CLEAR_BUTTON}
+    Activate    ${CLEAR_BUTTON}
 
 Result Should Be Equal
     [Documentation]    Asserts that the current calculator result equals the expected value.
