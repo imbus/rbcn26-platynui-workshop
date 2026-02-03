@@ -1,119 +1,120 @@
-1) contains()
-Exercise 1.1
+# Exercises
+
+## 1) contains()
+
+### Exercise 1.1
 
 Texts:
+
 - “Save file”
 - “Save as…”
 - “Choose save location”
 
 👉 Match all texts that contain “Save”
 
-
-Exercise 1.2
+### Exercise 1.2
 
 Buttons:
+
 - “OK”
 - “Cancel”
 - “OK (old)”
 
 👉 Find all buttons that contain “OK”.
 
+## 2) starts-with()
 
-
-2) starts-with()
-Exercise 2.1
+### Exercise 2.1
 
 Texts:
+
 - “User: Mike”
 - “User: Admin”
 - “Guest: Visitor”
 
 👉 Find only those starting with “User:”.
 
-
-Exercise 2.2
+### Exercise 2.2
 
 Window titles:
+
 - “Error – File missing”
 - “Error – Access denied”
 - “Warning – Disk almost full”
 
 👉 Find all windows that start with “Error”.
 
+## 3) normalize-space()
 
-
-3) normalize-space()
-Exercise 3.1
+### Exercise 3.1
 
 UI shows:
+
 - " Settings"
 - "Settings "
 - "Settings"
 
 👉 Match all reliably.
 
-
-Exercise 3.2
+### Exercise 3.2
 
 Text is:
 "   Login successful   "
 
 👉 Verify logical text is “Login successful”.
 
+## 4) not()
 
-
-4) not()
-Exercise 4.1
+### Exercise 4.1
 
 Buttons:
+
 - “Save”
 - “Save (old)”
 - “Save (disabled)”
 
 👉 Find only the real “Save” button.
 
-
-Exercise 4.2
+### Exercise 4.2
 
 List entries:
+
 - “Project A”
 - “Project B (inactive)”
 - “Project C”
 
 👉 Find only active projects.
 
+## 5) translate()
 
-
-5) translate()
-Exercise 5.1
+### Exercise 5.1
 
 Texts:
+
 - “Error while saving”
 - “ERROR while loading”
 - “error in input”
 
 👉 Find all, case-insensitive.
 
-
-Exercise 5.2
+### Exercise 5.2
 
 Texts:
+
 - “ID: 12345”
 - “ID: 98765”
 
 👉 Match elements with prefix "ID: " and show how to remove it.
 
+## 6) position() / last()
 
-
-6) position() / last()
-Exercise 6.1
+### Exercise 6.1
 
 Search results: many ListItems.
 
 👉 Always select the first result.
 
-
-Exercise 6.2
+### Exercise 6.2
 
 Log entries (ListItems): newest always at bottom.
 

@@ -1,12 +1,17 @@
-Combined Exercises
-Exercise A – Error message
+# Combined Exercises
+
+## Exercise A – Error message
+
 //Text[contains(translate(@Name,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'error')]
 
-Exercise B – Dialog filtering
+## Exercise B – Dialog filtering
+
 //Window[contains(@Name,'Confirmation')]//Button[contains(@Name,'OK') and not(contains(@Name,'(old)'))]
 
-Exercise C – Messy text
+## Exercise C – Messy text
+
 //Text[normalize-space(@Name)='Login successful']
 
-Exercise D – Result list
-(//ListItem[contains(@Name,'Project') and not(contains(@Name,'(old)'))])[1]
+## Exercise D – Result list
+
+//ListItem[contains(@Name,'Project') and not(contains(@Name,'(old)'))][1]
