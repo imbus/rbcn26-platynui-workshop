@@ -6,44 +6,55 @@ Library             PlatynUI
 
 *** Variables ***
 # Main Window
-${PLATYNUI_SUT_MAIN_WINDOW}                 Window[@Name="Widgets Gallery (QML)"]
+${MAIN_WINDOW}                  Window[@Name="Widgets Gallery (QML)"]
 
 ## Main Window TitleBar and Buttons
-${PLATYNUI_SUT_MINIMIEREN_BUTTON}           ${PLATYNUI_SUT_MAIN_WINDOW}/TitleBar/Button[@Name="Minimieren"]
-${PLATYNUI_SUT_MAXIMIEREN_BUTTON}           ${PLATYNUI_SUT_MAIN_WINDOW}/TitleBar/Button[@Name="Maximieren"]
-${PLATYNUI_SUT_SCHLIEßEN_BUTTON}            ${PLATYNUI_SUT_MAIN_WINDOW}/TitleBar/Button[@Name="Schließen"]
+${MINIMIEREN_BUTTON}            ${MAIN_WINDOW}/TitleBar/Button[@Name="Minimieren"]
+${MAXIMIEREN_BUTTON}            ${MAIN_WINDOW}/TitleBar/Button[@Name="Maximieren"]
+${SCHLIEßEN_BUTTON}             ${MAIN_WINDOW}/TitleBar/Button[@Name="Schließen"]
 
 ## Status Bar (Footer)
-${PLATYNUI_SUT_STATUSBAR}                   ${PLATYNUI_SUT_MAIN_WINDOW}/StatusBar
-${PLATYNUI_SUT_STATUSBAR_TEXT}              ${PLATYNUI_SUT_STATUSBAR}/Text
+${STATUSBAR}                    ${MAIN_WINDOW}/StatusBar
+${STATUSBAR_TEXT}               ${STATUSBAR}/Text
 
 ## Navigation Menu
-${PLATYNUI_SUT_NAV_MENU_LIST}               ${PLATYNUI_SUT_MAIN_WINDOW}//List[@Name="Navigation Menu"]
-${PLATYNUI_SUT_NAV_CONTROLS_LISTITEM}       ${PLATYNUI_SUT_NAV_MENU_LIST}/ListItem[@Name="Controls Page"]
-${PLATYNUI_SUT_NAV_LISTVIEW_LISTITEM}       ${PLATYNUI_SUT_NAV_MENU_LIST}/ListItem[@Name="ListView Page"]
-${PLATYNUI_SUT_NAV_TABLEVIEW_LISTITEM}      ${PLATYNUI_SUT_NAV_MENU_LIST}/ListItem[@Name="TableView Page"]
-${PLATYNUI_SUT_NAV_TEXTEDIT_LISTITEM}       ${PLATYNUI_SUT_NAV_MENU_LIST}/ListItem[@Name="TextEdit Page"]
-${PLATYNUI_SUT_NAV_ABOUT_LISTITEM}          ${PLATYNUI_SUT_NAV_MENU_LIST}/ListItem[@Name="About Page"]
+${NAV_MENU_LIST}                ${MAIN_WINDOW}//List[@Name="Navigation Menu"]
+${NAV_CONTROLS_LISTITEM}        ${NAV_MENU_LIST}/ListItem[@Name="Controls Page"]
+${NAV_LISTVIEW_LISTITEM}        ${NAV_MENU_LIST}/ListItem[@Name="ListView Page"]
+${NAV_TABLEVIEW_LISTITEM}       ${NAV_MENU_LIST}/ListItem[@Name="TableView Page"]
+${NAV_TEXTEDIT_LISTITEM}        ${NAV_MENU_LIST}/ListItem[@Name="TextEdit Page"]
+${NAV_MOUSE_LISTITEM}           ${NAV_MENU_LIST}/ListItem[@Name="Mouse Page"]
+${NAV_ABOUT_LISTITEM}           ${NAV_MENU_LIST}/ListItem[@Name="About Page"]
 
 ## Controls Page Content
-${PLATYNUI_SUT_BUTTONS_GROUP}               ${PLATYNUI_SUT_MAIN_WINDOW}//Group[@Name="Buttons Group"]
-${PLATYNUI_SUT_CHECKBOX_COMBOBOX_GROUP}     ${PLATYNUI_SUT_MAIN_WINDOW}//Group[@Name="CheckBox - ComboBox - Switch Group"]
-${PLATYNUI_SUT_RADIOBUTTONS_GROUP}          ${PLATYNUI_SUT_MAIN_WINDOW}//Group[@Name="RadioButtons Group"]
+${BUTTONS_GROUP}                ${MAIN_WINDOW}//Group[@Name="Buttons Group"]
+${CHECKBOX_COMBOBOX_GROUP}      ${MAIN_WINDOW}//Group[@Name="CheckBox - ComboBox - Switch Group"]
+${RADIOBUTTONS_GROUP}           ${MAIN_WINDOW}//Group[@Name="RadioButtons Group"]
 
 ### Buttons
-${PLATYNUI_SUT_REGULAR_BUTTON}              ${PLATYNUI_SUT_BUTTONS_GROUP}/Button[@Name="Regular Button"]
-${PLATYNUI_SUT_PRIMARY_BUTTON}              ${PLATYNUI_SUT_BUTTONS_GROUP}/Button[@Name="Primary Button with Icon"]
-${PLATYNUI_SUT_TOOL_BUTTON}                 ${PLATYNUI_SUT_BUTTONS_GROUP}/Button[@Name="Tool Button"]
+${REGULAR_BUTTON}               ${BUTTONS_GROUP}/Button[@Name="Regular Button"]
+${PRIMARY_BUTTON}               ${BUTTONS_GROUP}/Button[@Name="Primary Button with Icon"]
+${TOOL_BUTTON}                  ${BUTTONS_GROUP}/Button[@Name="Tool Button"]
 
 ### Checkbox - ComboBox - Switch
-${PLATYNUI_SUT_REGULAR_CHECKBOX}            ${PLATYNUI_SUT_CHECKBOX_COMBOBOX_GROUP}/CheckBox[@Name="Checked Checkbox"]
-${PLATYNUI_SUT_SELECT_COMBOBOX}             ${PLATYNUI_SUT_CHECKBOX_COMBOBOX_GROUP}/CheckBox[@Name="Select ComboBox"]
-${PLATYNUI_SUT_FLIGHT_SWITCH_CHECKBOX}      ${PLATYNUI_SUT_CHECKBOX_COMBOBOX_GROUP}/CheckBox[@Name="Flight Mode Switch"]
+${REGULAR_CHECKBOX}             ${CHECKBOX_COMBOBOX_GROUP}/CheckBox[@Name="Checked Checkbox"]
+${SELECT_COMBOBOX}              ${CHECKBOX_COMBOBOX_GROUP}/CheckBox[@Name="Select ComboBox"]
+${FLIGHT_SWITCH_CHECKBOX}       ${CHECKBOX_COMBOBOX_GROUP}/CheckBox[@Name="Flight Mode Switch"]
 
 ### Radio Buttons
-${PLATYNUI_SUT_SMALL_RADIOBUTTON}           ${PLATYNUI_SUT_RADIOBUTTONS_GROUP}/RadioButton[@Name="Small"]
-${PLATYNUI_SUT_MEDIUM_RADIOBUTTON}          ${PLATYNUI_SUT_RADIOBUTTONS_GROUP}/RadioButton[@Name="Medium"]
-${PLATYNUI_SUT_LARGE_RADIOBUTTON}           ${PLATYNUI_SUT_RADIOBUTTONS_GROUP}/RadioButton[@Name="Large"]
+${SMALL_RADIOBUTTON}            ${RADIOBUTTONS_GROUP}/RadioButton[@Name="Small"]
+${MEDIUM_RADIOBUTTON}           ${RADIOBUTTONS_GROUP}/RadioButton[@Name="Medium"]
+${LARGE_RADIOBUTTON}            ${RADIOBUTTONS_GROUP}/RadioButton[@Name="Large"]
 
-${PLATYNUI_SUT_DATE_TIME_GROUP}             ${PLATYNUI_SUT_MAIN_WINDOW}//Group[@Name="Date/Time Group"]
-${PLATYNUI_SUT_SLIDER_PROGRESS_GROUP}       ${PLATYNUI_SUT_MAIN_WINDOW}//Group[@Name="Slider / Progress Group"]
+### Date / Time
+${DATE_TIME_GROUP}              ${MAIN_WINDOW}//Group[@Name="Date/Time Group"]
+${DAY_SPINNER_EDIT}             ${DATE_TIME_GROUP}/Spinner[@Name="Day"]/Edit
+${MONTH_SPINNER_EDIT}           ${DATE_TIME_GROUP}/Spinner[@Name="Month"]/Edit
+${YEAR_SPINNER_EDIT}            ${DATE_TIME_GROUP}/Spinner[@Name="Year"]/Edit
+${HOUR_SPINNER_EDIT}            ${DATE_TIME_GROUP}/Spinner[@Name="Hour"]/Edit
+${MINUTE_SPINNER_EDIT}          ${DATE_TIME_GROUP}/Spinner[@Name="Minute"]/Edit
+${DATE_TIME_SELECT_BUTTON}      ${DATE_TIME_GROUP}/Button[@Name="Select Date and Time"]
+
+### Slider / Progress
+${SLIDER_PROGRESS_GROUP}        ${MAIN_WINDOW}//Group[@Name="Slider / Progress Group"]
+${PROGRESS_SLIDER}              ${SLIDER_PROGRESS_GROUP}/Slider[@Name="Progress Slider"]
