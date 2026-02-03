@@ -14,14 +14,14 @@ Please choose one of the following setups for the workshop.
 
 The best experience is on a local **Windows 10 or 11** machine (or VM). PlatynUI has the most comprehensive feature set on Windows.
 
-- [Installation Guide for Windows](docs/INSTALL_GUIDE_WINDOWS.md)
+- [Installation Guide for Windows](docs/WINDOWS_GUIDE.md)
 
 ### Option B: Linux (Alternative)
 
 You can use a local **Linux** machine (or VM), such as Fedora.
 > **Important:** You must use an **X11** session. Wayland is not fully supported for automation.
 
-- [Installation Guide for Linux](docs/INSTALL_GUIDE_LINUX.md)
+- [Installation Guide for Linux](docs/LINUX_GUIDE.md)
 
 ### Option C: Devcontainer (Fallback)
 
