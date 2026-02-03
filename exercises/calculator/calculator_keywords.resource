@@ -46,6 +46,6 @@ Clear Calculator
 Result Should Be Equal
     [Documentation]    Asserts that the current calculator result equals the expected value.
     ...    The assertion is strict (exact match).
-    [Arguments]    ${expected}
+    [Arguments]    ${expected_result}
     ${text}=    Get Property Value    ${RESULT_TEXT}    Name
-    Should Be Equal    ${text}    ${expected}
+    Should Be Equal    ${text}    ${expected_result}
