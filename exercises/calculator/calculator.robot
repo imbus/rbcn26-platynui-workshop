@@ -7,6 +7,7 @@ Documentation       Test Cases for calculator
 
 Resource            calculator_keywords.resource
 
+Suite Teardown      Close Calculator
 Test Setup          Focus Calculator
 Test Teardown       Clear Calculator
 

@@ -10,6 +10,11 @@ ${CALC_WINDOW}                  Window[@Name="Rechner" or @Name="Calculator"]
 ${ALWAYS_ON_TOP_BUTTON}         ${CALC_WINDOW}//Button[@AutomationId="NormalAlwaysOnTopButton"]
 ${EXIT_ALWAYS_ON_TOP_BUTTON}    ${CALC_WINDOW}//Button[@AutomationId="ExitAlwaysOnTopButton"]
 
+# --- TitleBar ---
+${MINIMIZE_BUTTON}              ${CALC_WINDOW}//Button[@AutomationId="Minimize"]
+${MAXIMIZE_BUTTON}              ${CALC_WINDOW}//Button[@AutomationId="Maximize"]
+${CLOSE_BUTTON}                 ${CALC_WINDOW}//Button[@AutomationId="Close"]
+
 # --- Buttons (Windows Calculator / UIA AutomationIds) ---
 ${0_BUTTON}                     ${CALC_WINDOW}//Button[@AutomationId="num0Button"]
 ${1_BUTTON}                     ${CALC_WINDOW}//Button[@AutomationId="num1Button"]
@@ -35,13 +40,17 @@ ${RESULT_TEXT}                  ${CALC_WINDOW}//Text[@AutomationId="NormalOutput
 
 *** Keywords ***
 Focus Calculator
-    [Documentation]    Brings the Calculator window to the foreground.
+    [Documentation]    Brings the Calculator Window to the foreground.
     ...    This prevents sending clicks/keys to the wrong application.
     Activate    ${CALC_WINDOW}
 
 Clear Calculator
-    [Documentation]    Resets Calculator input using the Clear button.
+    [Documentation]    Resets Calculator input using the Clear Button.
     Activate    ${CLEAR_BUTTON}
+
+Close Calculator
+    [Documentation]    Closes the Calculator using the "Close" Button.
+    Activate    ${CLOSE_BUTTON}
 
 Result Should Be Equal
     [Documentation]    Asserts that the current calculator result equals the expected value.
