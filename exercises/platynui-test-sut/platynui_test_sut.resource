@@ -58,3 +58,34 @@ ${DATE_TIME_SELECT_BUTTON}      ${DATE_TIME_GROUP}/Button[@Name="Select Date and
 ### Slider / Progress
 ${SLIDER_PROGRESS_GROUP}        ${MAIN_WINDOW}//Group[@Name="Slider / Progress Group"]
 ${PROGRESS_SLIDER}              ${SLIDER_PROGRESS_GROUP}/Slider[@Name="Progress Slider"]
+
+
+*** Keywords ***
+Fill In Date
+    [Documentation]    Select a Date / Time Edit and type in the value.
+    [Arguments]    ${field}    ${value}
+    Mouse Click    ${field}
+    Type Keys    .    <CONTROL+a>    <DELETE>
+    Type Keys    .    ${value}
+
+Set Slider To Value By Nudging
+    [Documentation]    Sets a slider to a target value using RangeValuePattern.Value.\n
+    ...    Focus via Mouse Click, then nudge RIGHT/LEFT until within tolerance.
+    [Arguments]    ${slider}    ${target}    ${max_steps}=300    ${tolerance}=0.5
+
+    Mouse Click    ${slider}
+
+    FOR    ${i}    IN RANGE    ${max_steps}
+        ${current}=    Get Property Value    ${slider}    RangeValuePattern.Value
+        ${diff}=    Evaluate    float($target) - float($current)
+
+        IF    abs(${diff}) <= ${tolerance}    RETURN
+
+        IF    ${diff} > 0
+            Type Keys    .    <RIGHT>
+        ELSE
+            Type Keys    .    <LEFT>
+        END
+    END
+
+    Fail    Slider did not reach target (${target}) within ${max_steps} steps.
