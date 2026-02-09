@@ -15,7 +15,6 @@ dependencies = [
 [tool.uv]
 # Optional: prefer an in-project venv for predictable tooling in VS Code
 managed = true
-]
 
 [build-system]
 requires = ["uv_build>=0.9.29,<0.10.0"]
