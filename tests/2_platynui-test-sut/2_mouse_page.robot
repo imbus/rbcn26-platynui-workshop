@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Test Cases for Mouse Page
 
-Resource            platynui_test_sut.resource
+Resource            platynui_workshop/platynui_test_sut.resource
 
 Test Setup          Mouse Click    ${NAV_MOUSE_LISTITEM}
 Test Teardown       Mouse Click    ${RESET_APPLICATION_BUTTON}

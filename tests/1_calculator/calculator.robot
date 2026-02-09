@@ -5,7 +5,7 @@ The Calculator must be opened manually.
 *** Settings ***
 Documentation       Test Cases for calculator
 
-Resource            calculator_keywords.resource
+Resource            platynui_workshop/calculator_keywords.resource
 
 Suite Teardown      Close Calculator
 Test Setup          Focus Calculator
