@@ -16,14 +16,20 @@ The best experience is on a local **Windows 10 or 11** machine (or VM). PlatynUI
 
 - [Installation Guide for Windows](docs/WINDOWS_GUIDE.md)
 
-### Option B: Linux (Alternative)
+### Option B: Windows ARM VM (for MacOS Users)
+
+If you are using a **MacOS host** machine, PlatynUI can be run on a **Windows 11 ARM VM**. We used UTM for virtualization. For detailed setup refer to the installation guide below:
+
+- [Installation Guide Windows ARM on MacOS](docs/ARM_WINDOWS_GUIDE.md)
+
+### Option C: Linux (Alternative)
 
 You can use a local **Linux** machine (or VM), such as Fedora.
 > **Important:** You must use an **X11** session. Wayland is not fully supported for automation.
 
 - [Installation Guide for Linux](docs/LINUX_GUIDE.md)
 
-### Option C: Devcontainer (Fallback)
+### Option D: Devcontainer (Fallback)
 
 If you cannot install software locally or run a VM, use the **Devcontainer**.
 > **Note:** This is a fallback solution with limitations in compatibility and performance.
