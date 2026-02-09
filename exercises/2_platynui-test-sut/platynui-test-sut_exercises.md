@@ -7,18 +7,6 @@ Exercise 2 - CheckBox/ComboBox/Switch: Activate "Flight Mode" Switch. Ensure tha
 Exercise 3 - RadioButtons: Select "Large" Radio Button.
 Exercise 4 - Date/Time: Select today's date, 16:30 and verify that it is displayed in the StatusBar (Footer).
 
-## ListView Page
-
-1) ???
-
-## TableView Page
-
-1) Filtering how?
-
-## TextEdit Page
-
-1) ???
-
 ## Mouse Page
 
 1) Change the Trail Color to "Purple".
@@ -27,11 +15,5 @@ Exercise 4 - Date/Time: Select today's date, 16:30 and verify that it is display
 ## About Page
 
 1) Read out the following information and log them to console: Version, Technology and Purpose.
-
-## Easteregg
-
-Find the secret Easteregg!
-
-- *Hint 1:* Navigate to TextEdit Page and enter the following text: Very very early stage!
-- *Hint 2:* Search for any change within the PlatynUI Test SUT
-  
+2) Read out the following information and log them (Log Many): Version, Technology and Purpose.
+3) Find the secret Easteregg! Navigate to TextEdit Page and enter the following text: Very very early stage! Then search for any change.

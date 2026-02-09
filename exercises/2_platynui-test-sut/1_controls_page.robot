@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Test Cases for the PlatynUI Test SUT
+Documentation       Test Cases for Control Page
 
 Resource            platynui_test_sut.resource
 
