@@ -3,6 +3,8 @@ Documentation       Test Cases for the PlatynUI Test SUT
 
 Resource            platynui_test_sut.resource
 
+Test Setup          Mouse Click    ${NAV_CONTROLS_LISTITEM}
+
 
 *** Test Cases ***
 Exercise 1: Click "Regular" Button
@@ -33,7 +35,7 @@ Exercise 3: Select "Large" RadioButton
     # TogglePattern.ToggleState tells you if the RadioButton is activated (1) or deactivated (0)
     Get Property Value    ${LARGE_RADIOBUTTON}    TogglePattern.ToggleState    ==    ${1}
 
-Exercise 4a: Select a specific Date and Time
+Exercise 4a: Select A Specific Date And Time
     [Documentation]    Select today's date, 16:30 and verify that it is displayed in the StatusBar (Footer).
     Mouse Click    ${DAY_SPINNER_EDIT}
     Type Keys    .    <CONTROL+a>    <DELETE>
@@ -54,7 +56,7 @@ Exercise 4a: Select a specific Date and Time
     ${footer_text}    Get Property Value    ${STATUSBAR_TEXT}    Name
     Should Be Equal    ${footer_text}    Status: Selected 10/2/2026 16:30
 
-Exercise 4b: Select a specific Date and Time
+Exercise 4b: Select A Specific Date And Time
     [Documentation]    Select today's date, 16:30 and verify that it is displayed in the StatusBar (Footer).
     Fill In Date    ${DAY_SPINNER_EDIT}    10
     Fill In Date    ${MONTH_SPINNER_EDIT}    02
@@ -65,7 +67,7 @@ Exercise 4b: Select a specific Date and Time
     ${footer_text}    Get Property Value    ${STATUSBAR_TEXT}    Name
     Should Be Equal    ${footer_text}    Status: Selected 10/2/2026 16:30
 
-Exercise 4c: Select Specific Date And Time
+Exercise 4c: Select A Specific Date And Time
     [Documentation]    Select today’s date, 16:30 and verify it is displayed in the footer.
     FOR    ${field}    ${value}    IN
     ...    ${DAY_SPINNER_EDIT}    10
@@ -75,6 +77,17 @@ Exercise 4c: Select Specific Date And Time
     ...    ${MINUTE_SPINNER_EDIT}    30
         Fill In Date    ${field}    ${value}
     END
+    Activate    ${DATE_TIME_SELECT_BUTTON}
+    ${footer_text}    Get Property Value    ${STATUSBAR_TEXT}    Name
+    Should Be Equal    ${footer_text}    Status: Selected 10/2/2026 16:30
+
+Exercise 4d: Select A Specific Date And Time
+    [Documentation]    Select today’s date, 16:30 and verify it is displayed in the footer.
+    Set Text    ${DAY_SPINNER_EDIT}    10
+    Set Text    ${MONTH_SPINNER_EDIT}    02
+    Set Text    ${YEAR_SPINNER_EDIT}    2026
+    Set Text    ${HOUR_SPINNER_EDIT}    16
+    Set Text    ${MINUTE_SPINNER_EDIT}    30
     Activate    ${DATE_TIME_SELECT_BUTTON}
     ${footer_text}    Get Property Value    ${STATUSBAR_TEXT}    Name
     Should Be Equal    ${footer_text}    Status: Selected 10/2/2026 16:30
