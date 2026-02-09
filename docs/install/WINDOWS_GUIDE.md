@@ -129,11 +129,11 @@ Open VS Code → Extensions → install:
 - **Python** (`ms-python.python`)
 - **RobotCode** (`d-biehl.robotcode`)
 
-Robot Framework docs recommend using **RobotCode** and installing only one Robot Framework extension to avoid conflicts. citeturn2search10
+Robot Framework docs recommend using **RobotCode** and installing only one Robot Framework extension to avoid conflicts.
 
 ### Option B: Install via CLI
 
-VS Code supports `--install-extension` on the command line. citeturn1search10
+VS Code supports `--install-extension` on the command line.
 
 ```powershell
 code --install-extension ms-python.python
@@ -171,9 +171,9 @@ cd rbcn26-platynui-workshop
 
 If cloning via SSH fails, set up SSH keys for GitHub:
 
-- Generate a new SSH key and add it to the ssh-agent (includes Windows steps): citeturn0search3
-- Add the SSH public key to your GitHub account: citeturn0search14
-- Overview: connecting to GitHub with SSH: citeturn0search17
+- Generate a new SSH key and add it to the ssh-agent (includes Windows steps): [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- Add the SSH public key to your GitHub account: [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+- Overview: connecting to GitHub with SSH: [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 
 Test your SSH connection:
 
