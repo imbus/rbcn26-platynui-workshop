@@ -1,7 +1,7 @@
 [project]
 name = "platynui-workshop"
 version = "0.1.0"
-description = "Add your description here"
+description = "Explore robotframework-platynui, a new cross-platform library for desktop UI automation with Robot Framework. This tutorial offers hands-on experience in setting up and utilizing PlatynUI to create robust, maintainable tests for desktop applications across Windows, macOS, and Linux."
 readme = "README.md"
 requires-python = ">=3.11,<3.14"
 dependencies = [
