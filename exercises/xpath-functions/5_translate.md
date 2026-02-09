@@ -1,4 +1,4 @@
-# Comments
+# Translate
 
 translate(string, from, to)
 

@@ -1,4 +1,4 @@
-# Comments
+# Contains
 
 contains(string, substring)
 

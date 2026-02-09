@@ -1,4 +1,4 @@
-# Comments
+# Starts with
 
 starts-with(string, prefix)
 

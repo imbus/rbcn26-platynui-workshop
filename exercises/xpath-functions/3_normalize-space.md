@@ -1,4 +1,4 @@
-# Comments
+# Normalize space
 
 normalize-space(string)
 
