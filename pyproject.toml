@@ -1,9 +1,12 @@
 [project]
 name = "platynui-workshop"
 version = "0.1.0"
-description = "Workshop environment for Robot Framework + PlatynUI desktop automation"
+description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12,<3.14"
+authors = [
+    { name = "Fabian Tsirogiannis", email = "fabian.tsirogiannis@imbus.de" }
+]
+requires-python = ">=3.11,<3.14"
 dependencies = [
     "robotframework>=7.4.1",
     "robotframework-platynui>=0.9.0",
@@ -12,3 +15,8 @@ dependencies = [
 [tool.uv]
 # Optional: prefer an in-project venv for predictable tooling in VS Code
 managed = true
+]
+
+[build-system]
+requires = ["uv_build>=0.9.29,<0.10.0"]
+build-backend = "uv_build"

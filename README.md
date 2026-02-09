@@ -1,64 +1,60 @@
-# Robocon 2026 – PlatynUI Workshop Devcontainer
+# Robocon 2026 – PlatynUI Workshop
 
-This repository provides a ready-to-use workshop environment for desktop UI automation with Robot Framework and **robotframework-platynui**.
+Welcome to this practical session introducing **robotframework-platynui**, a cross-platform UI testing library for desktop applications.
 
-Key goals:
+## Introduction
 
-- A consistent **Linux desktop** for everyone (Windows/macOS/Linux hosts) via **noVNC**.
-- A preconfigured **Python + uv** development environment.
-- A GUI-capable environment to run:
-  - **PlatynUI Spy** (element inspection, locator development)
-  - the workshop **SUT** (Qt / PySide6 application) inside the VNC desktop
+This practical session introduces **robotframework-platynui**, a cross-platform UI testing library for desktop applications. You'll learn to set up your environment, use the PlatynUI Spy tool, create effective locators, and build your own test cases. Advanced topics include structuring test suites, remote test execution, and solving common automation challenges.
 
----
+## Setup & Installation
 
-## What you get
+Please choose one of the following setups for the workshop.
 
-- A Linux desktop reachable in your browser (noVNC)
-- Python project dependencies managed by **uv**
-- Helper scripts for common tasks:
-  - Start PlatynUI Spy
-  - Start the SUT
-  - Run Robot Framework tests
+### Option A: Windows (Preferred)
 
----
+The best experience is on a local **Windows 10 or 11** machine (or VM). PlatynUI has the most comprehensive feature set on Windows.
 
-## Prerequisites (participants)
+- [Installation Guide for Windows](docs/WINDOWS_GUIDE.md)
 
-Install locally:
+### Option B: Windows ARM VM (for MacOS Users)
 
-- Docker Desktop
-- Visual Studio Code
-- VS Code extension: **Dev Containers** (`ms-vscode-remote.remote-containers`)
+If you are using a **MacOS host** machine, PlatynUI can be run on a **Windows 11 ARM VM**. We used UTM for virtualization. For detailed setup refer to the installation guide below:
 
-No Python installation is required on the host, because everything runs inside the container.
+- [Installation Guide Windows ARM on MacOS](docs/ARM_WINDOWS_GUIDE.md)
 
----
+### Option C: Linux (Alternative)
 
-## Quick start
+You can use a local **Linux** machine (or VM), such as Fedora.
+> **Important:** You must use an **X11** session. Wayland is not fully supported for automation.
 
-### 1) Open in the Dev Container
+- [Installation Guide for Linux](docs/LINUX_GUIDE.md)
 
-1. Open this repository in VS Code.
-2. Run **“Dev Containers: Rebuild and Reopen in Container”** (first time) or **“Reopen in Container”** (subsequent times).
+### Option D: Devcontainer (Fallback)
 
-The container is pinned to **linux/amd64** because `robotframework-platynui` provides Linux wheels for x86_64.
-On Apple Silicon this runs under emulation and may be slower than a native amd64 machine.
+If you cannot install software locally or run a VM, use the **Devcontainer**.
+> **Note:** This is a fallback solution with limitations in compatibility and performance.
 
-### 2) Open the Linux desktop (noVNC)
+- [Devcontainer Guide](docs/DEVCONTAINER_GUIDE.md)
 
-In VS Code:
-- Open the **Ports** panel.
-- Find port **6080** and open it in the browser.
+## Workshop Description
 
-You should see the container desktop session.
+### Topics Covered
 
----
+- **PlatynUI architecture** and key advantages
+- **Installation**, integration, and environment setup
+- **Using PlatynUI Spy** and writing strong locators
+- **Test suite design** and maintenance
 
-## Running PlatynUI Spy
+### Target Audience
 
-Run (inside the container terminal):
+QA engineers, automation testers, and developers familiar with Robot Framework and Python, looking to expand into desktop UI testing.
 
-```bash
-scripts/start-spy.sh
-```
+### Planned Exercises
+
+1. **Set up and configure PlatynUI** in your testing environment.
+2. **Use PlatynUI Spy** to inspect elements and understand the object tree.
+3. **Create reliable locators** using different strategies.
+4. **Build stable desktop UI tests** for a sample application.
+5. **Apply best practices** for maintainable test automation.
+
+By the end of this workshop, you will be able to apply reliable locator strategies and troubleshoot common issues in desktop UI automation.

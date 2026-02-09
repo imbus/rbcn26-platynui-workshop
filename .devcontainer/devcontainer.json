@@ -35,15 +35,20 @@
       "extensions": [
         "ms-python.python",
         "d-biehl.robotcode",
-        "tamasfe.even-better-toml",
-        "charliermarsh.ruff",
-        "ms-python.black-formatter",
-        "ms-python.mypy-type-checker"
+        "tamasfe.even-better-toml"
       ],
       "settings": {
         "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
       }
     }
+  },
+
+  "containerEnv": {
+    "XDG_SESSION_TYPE": "x11",
+    "GDK_BACKEND": "x11",
+    "QT_QPA_PLATFORM": "xcb",
+    "SDL_VIDEODRIVER": "x11",
+    "CLUTTER_BACKEND": "x11"
   },
 
   "forwardPorts": [6080],
