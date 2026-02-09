@@ -106,7 +106,7 @@ uv --version
 
 ### Install a supported Python version
 
-Workshop requirement: **Python > 3.10 and < 3.14** (recommended: **3.12 or 3.13**)
+Workshop requirement: **Python >= 3.10 and < 3.14** (recommended: **3.12 or 3.13**)
 
 ```bash
 uv python install 3.13
