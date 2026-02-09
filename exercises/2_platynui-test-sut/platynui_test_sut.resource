@@ -67,25 +67,3 @@ Fill In Date
     Mouse Click    ${field}
     Type Keys    .    <CONTROL+a>    <DELETE>
     Type Keys    .    ${value}
-
-Set Slider To Value By Nudging
-    [Documentation]    Sets a slider to a target value using RangeValuePattern.Value.\n
-    ...    Focus via Mouse Click, then nudge RIGHT/LEFT until within tolerance.
-    [Arguments]    ${slider}    ${target}    ${max_steps}=300    ${tolerance}=0.5
-
-    Mouse Click    ${slider}
-
-    FOR    ${i}    IN RANGE    ${max_steps}
-        ${current}=    Get Property Value    ${slider}    RangeValuePattern.Value
-        ${diff}=    Evaluate    float($target) - float($current)
-
-        IF    abs(${diff}) <= ${tolerance}    RETURN
-
-        IF    ${diff} > 0
-            Type Keys    .    <RIGHT>
-        ELSE
-            Type Keys    .    <LEFT>
-        END
-    END
-
-    Fail    Slider did not reach target (${target}) within ${max_steps} steps.

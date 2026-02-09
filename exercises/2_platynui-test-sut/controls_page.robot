@@ -91,7 +91,3 @@ Exercise 4d: Select A Specific Date And Time
     Activate    ${DATE_TIME_SELECT_BUTTON}
     ${footer_text}    Get Property Value    ${STATUSBAR_TEXT}    Name
     Should Be Equal    ${footer_text}    Status: Selected 10/2/2026 16:30
-
-Exercise 5a: Push The Slider To 60 %
-    [Documentation]    Push the Slider to 60 % (with a tolerance of about 0,5).
-    Set Slider To Value By Nudging    ${PROGRESS_SLIDER}    60
