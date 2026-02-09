@@ -68,7 +68,10 @@ ${TEXT_EDIT_PAGE_EDIT}              ${TEXT_EDIT_TAB}//Edit
 ## Mouse Page Content
 ${MP_TRACKING_CONTROLS_GROUP}       ${MAIN_WINDOW}//Group[@Name="Mouse Tracking Controls"]
 ${MP_TRAIL_COLOR_COMBOBOX}          ${MP_TRACKING_CONTROLS_GROUP}/ComboBox[@Name="Trail Color"]
-${MP_TRAIL_COLOR_PURPLE_EDIT}       ${MP_TRAIL_COLOR_COMBOBOX}//*[@Name"Purple"]
+${MP_TRAIL_COLOR_PURPLE_EDIT}       ${MP_TRAIL_COLOR_COMBOBOX}/Edit
+
+### Mouse Page - Mouse Drawing Area
+${MP_DRAWING_AREA_GROUP}       ${MAIN_WINDOW}//Group[@Name="Mouse Drawing Area"]
 
 ## About Page Content
 ${ABOUT_PAGE_GROUP}                 ${MAIN_WINDOW}//Group[@Name="About Group"]
