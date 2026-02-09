@@ -8,7 +8,7 @@ Resource            platynui_test_sut.resource
 Exercise 1: Click "Regular" Button
     [Documentation]    Click "Regular" Button and check that it is clicked.
     Activate    ${REGULAR_BUTTON}
-    Ensure Exists    ${STATUSBAR_TEXT}\[@Name="Status: Regular clicked"]
+    Ensure Exists    ${STATUSBAR_TEXT}\[@Name="Status: Regular button clicked"]
 
 Exercise 2a: Activate "Flight Mode" Switch (Variante 1)
     [Documentation]    Check if Flight Mode is active - if not, activate it!
@@ -79,6 +79,6 @@ Exercise 4c: Select Specific Date And Time
     ${footer_text}    Get Property Value    ${STATUSBAR_TEXT}    Name
     Should Be Equal    ${footer_text}    Status: Selected 10/2/2026 16:30
 
-Exercise 5: Push The Slider To 60 %
+Exercise 5a: Push The Slider To 60 %
     [Documentation]    Push the Slider to 60 % (with a tolerance of about 0,5).
     Set Slider To Value By Nudging    ${PROGRESS_SLIDER}    60

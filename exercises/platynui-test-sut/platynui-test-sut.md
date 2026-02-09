@@ -29,9 +29,10 @@ Exercise 5 - Slider: Push the Slider to 60 %.
 
 1) Read out the following information and log them to console: Version, Technology and Purpose.
 
-Anmerkungen:
-MenuBar - Restart der Anwendung möglich?
-MenuBar - Help - About führt zur "Mouse" Page
-Mouse Page - Zurücksetzen möglich?
-TextEdit Page - Zurücksetzen möglich?
-Easteregg mit Daniels Bild?
+## Easteregg
+
+Find the secret Easteregg!
+
+- *Hint 1:* Navigate to TextEdit Page and enter the following text: Very very early stage!
+- *Hint 2:* Search for any change within the PlatynUI Test SUT
+  

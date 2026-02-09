@@ -1,4 +1,4 @@
-*** Comments ***
+# Comments
 
 normalize-space(string)
 
@@ -7,6 +7,7 @@ Beispiel:
 //Text[normalize-space(.)='Einstellungen']
 
 Folgende Fälle werden damit abgedeckt:
+
 - " Einstellungen"
 - "Einstellungen "
 - "Einstellungen\n"

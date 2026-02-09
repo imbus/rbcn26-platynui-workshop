@@ -1,4 +1,4 @@
-*** Comments ***
+# Comments
 
 translate(string, from, to)
 
@@ -10,9 +10,9 @@ translate('Hallo Welt', 'HW', 'hw')
 
 Ergebnis: 'hallo welt'
 
-
 Beispiel2:
 Folgende Meldungen werden angezeigt:
+
 - „Fehler beim Speichern“
 - „FEHLER beim Speichern“
 - „fehler beim Speichern“
