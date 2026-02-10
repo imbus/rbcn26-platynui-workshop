@@ -1,9 +1,4 @@
-from PlatynUI.ui import Application, Window, Button, Text, locator
-
-
-@locator(name="Calc", use_default_prefix=True)
-class MyApplication(Application):
-    pass
+from PlatynUI.ui import Window, Button, Text, locator
 
 @locator(name="Rechner")
 class Calculator(Window):
