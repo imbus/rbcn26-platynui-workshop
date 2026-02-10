@@ -59,6 +59,8 @@ QA engineers, automation testers, and developers familiar with Robot Framework a
 
 By the end of this workshop, you will be able to apply reliable locator strategies and troubleshoot common issues in desktop UI automation.
 
-### PlatynUI Sample SUT
+### Useful Links
 
-<https://github.com/imbus/platynui-sut>
+[PlatynUI SUT](https://github.com/imbus/platynui-sut)
+
+[Mozilla Xpath Functions](https://developer.mozilla.org/en-US/docs/Web/XML/XPath/Reference/Functions)
