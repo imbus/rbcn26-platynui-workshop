@@ -46,13 +46,14 @@ Exercise 4 - Division 30 / 10 = 3
     Activate    ${0_BUTTON}
     Activate    ${EQUALS_BUTTON}
     Result Should Be Equal    3
-
 Exercise 5 - Bring the calculator app "always on top"
-    [Documentation]    Find a possibility to bring the calculator app "always on top".
-    Activate    ${ALWAYS_ON_TOP_BUTTON}
-    Ensure Exists    ${EXIT_ALWAYS_ON_TOP_BUTTON}
+    [Documentation]    Find a possibility to bring the calculator app "always on top". It only activate the Button if it is visible.
+    ${is_visible}    Run Keyword And Return Status    Ensure Exists    ${ALWAYS_ON_TOP_BUTTON}    timeout=0
+    IF    ${is_visible}    Activate    ${ALWAYS_ON_TOP_BUTTON}
+    [Teardown]    NONE
 
 Exercise 6 - Exit the "always on top" state
     [Documentation]    Exit the "always on top" state.
-    Activate    ${EXIT_ALWAYS_ON_TOP_BUTTON}
-    Ensure Exists    ${ALWAYS_ON_TOP_BUTTON}
+    ${is_visible}    Run Keyword And Return Status    Ensure Exists    ${EXIT_ALWAYS_ON_TOP_BUTTON}    timeout=0
+    IF    ${is_visible}    Activate    ${EXIT_ALWAYS_ON_TOP_BUTTON}
+    [Teardown]    NONE
