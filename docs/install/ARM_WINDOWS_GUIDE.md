@@ -139,17 +139,8 @@ You need these variables set when running Robot / PlatynUI:
 - `PYTHONNET_CORECLR_DOTNET_ROOT=...` (points to the correct .NET root)
 - `DOTNET_ROOT=...` (same root; also used by other tooling)
 
-### Option A (recommended): ARM64 Python + ARM64 .NET
 
-Use the default ARM64 .NET root:
-
-```powershell
-$env:PYTHONNET_RUNTIME = "coreclr"
-$env:PYTHONNET_CORECLR_DOTNET_ROOT = "C:\Program Files\dotnet"
-$env:DOTNET_ROOT = "C:\Program Files\dotnet"
-```
-
-### Option B: ARM64 Windows VM using x64 .NET (emulated) — known working setup
+### ARM64 Windows VM using x64 .NET (emulated) — known working setup
 
 If you installed **Windows x64 .NET Desktop Runtime** on Windows ARM64, it lives under `C:\Program Files\dotnet\x64`. Point pythonnet at that root:
 
@@ -159,18 +150,9 @@ $env:PYTHONNET_CORECLR_DOTNET_ROOT = "C:\Program Files\dotnet\x64"
 $env:DOTNET_ROOT = "C:\Program Files\dotnet\x64"
 ```
 
-### Option C: Set variables in Robot Framework via `.robot.toml` (project-local)
+### Set variables in Robot Framework via `.robot.toml` (project-local)
 
 If you already use a `.robot.toml` in your Robot Framework project, add the matching block.
-
-**ARM64 Python + ARM64 .NET**:
-
-```toml
-[env]
-PYTHONNET_RUNTIME = "coreclr"
-PYTHONNET_CORECLR_DOTNET_ROOT = "C:\\Program Files\\dotnet"
-DOTNET_ROOT = "C:\\Program Files\\dotnet"
-```
 
 **x64 .NET on ARM64**:
 
@@ -181,7 +163,7 @@ PYTHONNET_CORECLR_DOTNET_ROOT = "C:\\Program Files\\dotnet\\x64"
 DOTNET_ROOT = "C:\\Program Files\\dotnet\\x64"
 ```
 
-### Option D: Set variables permanently (System Properties)
+### Set variables permanently (System Properties)
 
 Set them in:
 **System Properties → Environment Variables → (User or System variables)**
@@ -258,14 +240,11 @@ dotnet --info
 2. Locate `hostfxr.dll`:
 
 ```powershell
-# ARM64 .NET
-Get-ChildItem "C:\Program Files\dotnet\host\fxr" -Recurse -Filter hostfxr.dll
-
 # x64 .NET on ARM64
 Get-ChildItem "C:\Program Files\dotnet\x64\host\fxr" -Recurse -Filter hostfxr.dll
 ```
 
-3. Set `DOTNET_ROOT` and `PYTHONNET_CORECLR_DOTNET_ROOT` to the matching root (`C:\Program Files\dotnet` or `C:\Program Files\dotnet\x64`) and re-test:
+3. Set `DOTNET_ROOT` and `PYTHONNET_CORECLR_DOTNET_ROOT` to the matching root (`C:\Program Files\dotnet\x64`) and re-test:
 
 ```powershell
 python -c "from pythonnet import load; load('coreclr'); print('coreclr loaded')"
