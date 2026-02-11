@@ -3,12 +3,11 @@ name = "platynui-workshop"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-authors = [
-    { name = "Fabian Tsirogiannis", email = "fabian.tsirogiannis@imbus.de" }
-]
 requires-python = ">=3.11,<3.14"
 dependencies = [
     "robotframework>=7.4.1",
+    "robotframework-jsonrpcremote>=0.1.0",
+    "robotframework-jsonrpcremote-protocol>=0.1.0",
 ]
 
 [build-system]
