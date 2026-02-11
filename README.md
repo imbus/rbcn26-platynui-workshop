@@ -58,3 +58,9 @@ QA engineers, automation testers, and developers familiar with Robot Framework a
 5. **Apply best practices** for maintainable test automation.
 
 By the end of this workshop, you will be able to apply reliable locator strategies and troubleshoot common issues in desktop UI automation.
+
+### Useful Links
+
+[PlatynUI SUT](https://github.com/imbus/platynui-sut)
+
+[Mozilla Xpath Functions](https://developer.mozilla.org/en-US/docs/Web/XML/XPath/Reference/Functions)
